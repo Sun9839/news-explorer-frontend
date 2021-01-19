@@ -1,0 +1,215 @@
+.newsCard{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    background: #FFFFFF;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.newsCard__saveButton{
+    position: absolute;
+    padding: 0;
+    border: none;
+    background: #FFFFFF url("../../images/save.svg") no-repeat center;
+    background-size: 14px 19px;
+}
+
+.newsCard__saveButton:hover{
+    background: #FFFFFF url('../../images/save_hover.svg') no-repeat center;
+    background-size: 14px 19px;
+}
+
+.newsCard__saveButton.newsCard__saveButton_clicked{
+    background: #FFFFFF url('../../images/save_marked.svg') no-repeat center;
+    background-size: 14px 19px;
+}
+
+.newsCard__keyword{
+    display: none;
+    position: absolute;
+    width: 88px;
+    height: 40px;
+    background: #FFFFFF;
+    padding: 0;
+    border: none;
+    border-radius: 10px;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.newsCard__keyword:hover{
+    opacity: 0.9;
+}
+
+.newsCard__keyword.newsCard__keyword_active{
+    display: unset;
+}
+
+.newsCard__date{
+    color: #B6BCBF;
+}
+
+.newsCard__source{
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+    color: #B6BCBF;
+    text-decoration: none;
+}
+
+@media screen and (min-width: 320px){
+    .newsCard{
+        width: 288px;
+        margin: 9px 0;
+        height: 446px;
+    }
+
+    .newsCard__image{
+        width: 288px;
+        height: 196px;
+    }
+
+    .newsCard__saveButton{
+        top: 16px;
+        right: 16px;
+        border-radius: 8px;
+        width: 40px;
+        height: 40px;
+        outline: none;
+    }
+
+    .newsCard__keyword{
+        top: 16px;
+        left: 16px;
+    }
+
+    .newsCard__date{
+        margin: 16px auto 0 auto;
+        width: 256px;
+        text-align: left;
+        font-size: 18px;
+        line-height: 24px;
+    }
+
+    .newsCard__title{
+        margin: 10px auto 0 auto;
+        width: 256px;
+        font-size: 22px;
+        line-height: 28px;
+    }
+
+    .newsCard__text{
+        margin: 10px auto 0 auto;
+        width: 256px;
+        font-size: 16px;
+        line-height: 22px;
+        height: 88px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .newsCard__source{
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 20px;
+        margin: 8px auto 0 auto;
+        width: 256px;
+        text-align: left;
+    }
+}
+
+@media screen and (min-width: 768px){
+    .newsCard{
+        width: 224px;
+        height: 420px;
+    }
+
+    .newsCard__image{
+        width: 224px;
+        height: 150px;
+    }
+
+    .newsCard__saveButton{
+        top: 8px;
+        right: 8px;
+    }
+
+    .newsCard__keyword{
+        top: 8px;
+        left: 8px;
+    }
+
+    .newsCard__date{
+        font-size: 18px;
+        line-height: 24px;
+        margin: 16px 0 0 16px;
+    }
+
+    .newsCard__title{
+        width: 192px;
+        font-size: 22px;
+        line-height: 24px;
+        margin: 12px 0 0 16px;
+    }
+
+    .newsCard__text{
+        font-size: 16px;
+        line-height: 22px;
+        margin: 10px 0 0 16px;
+        width: 192px;
+    }
+
+    .newsCard__source{
+        margin: 12px 0 0 16px;
+        font-size: 16px;
+        line-height: 20px;
+    }
+}
+
+@media screen and (min-width: 1440px){
+    .newsCard{
+        width: 400px;
+        height: 576px;
+    }
+
+    .newsCard__image{
+        width: 400px;
+        height: 272px;
+    }
+
+    .newsCard__saveButton{
+        top: 24px;
+        right: 24px;
+    }
+
+    .newsCard__keyword{
+        top: 24px;
+        left: 24px;
+    }
+
+    .newsCard__date{
+        font-size: 18px;
+        line-height: 24px;
+        margin: 20px 0 0 24px;
+    }
+
+    .newsCard__title{
+        width: 352px;
+        font-size: 26px;
+        line-height: 30px;
+        margin: 12px 0 0 24px;
+    }
+
+    .newsCard__text{
+        width: 352px;
+        font-size: 16px;
+        line-height: 22px;
+        margin: 16px 0 0 24px;
+    }
+
+    .newsCard__source{
+        font-size: 16px;
+        line-height: 20px;
+        margin: 18px 0 0 24px;
+    }
+}

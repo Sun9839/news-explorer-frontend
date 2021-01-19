@@ -1,0 +1,119 @@
+.navigation__links{
+    list-style: none;
+    padding: 0;
+}
+
+.navigation__link{
+    color: #FFFFFF;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.navigation__button{
+    background: none;
+    border-radius: 100px;
+    border: 1px solid #FFFFFF;
+    color: #FFFFFF;
+    font-weight: 500;
+    outline: none;
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px){
+    .navigation{
+        display: flex;
+        visibility: hidden;
+        flex-direction: column;
+        position: absolute;
+        width: 100%;
+        top: 56px;
+        border-bottom-left-radius: 16px;
+        border-bottom-right-radius: 16px;
+        padding-bottom: 24px;
+        transition: visibility 0.2s linear,background 0.2s linear;
+    }
+
+    .navigation.navigation__active{
+        visibility: visible;
+        background: #1A1B22;
+    }
+
+    .navigation__links{
+        margin: 16px auto 0 auto;
+        width: 288px;
+        height: 112px;
+    }
+
+    .navigation__link{
+        font-size: 18px;
+        line-height: 56px;
+    }
+
+    .navigation__button{
+        margin: 22px calc(50% - 142px) 0 calc(50% - 146px);
+        width: 288px;
+        height: 56px;
+        font-size: 18px;
+        line-height: 24px;
+    }
+
+
+}
+
+@media screen and (min-width: 768px){
+    .navigation{
+        display: flex;
+        flex-direction: row;
+        margin: 0 40px 0 auto;
+    }
+
+    .navigation__links{
+        display: flex;
+        flex-direction: row;
+        margin: 22px 16px 20px 0;
+    }
+
+    .navigation__link{
+        margin-left: 16px;
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .navigation__link.navigation__link_black{
+        color: #1A1B22;
+    }
+
+    .navigation__button{
+        width: 152px;
+        height: 40px;
+        margin: 14px 0 12px;
+    }
+
+    .navigation__button.navigation__button_black{
+        color: #1A1B22;
+        border: 1px solid #1A1B22;
+    }
+}
+
+@media screen and (min-width: 1440px){
+    .navigation{
+        margin: 0 104px 0 auto;
+    }
+
+    .navigation__links{
+        margin: 30px 32px 26px;
+    }
+
+    .navigation__link{
+        font-size: 18px;
+        line-height: 24px;
+        margin-left: 34px;
+    }
+
+    .navigation__button{
+        width: 176px;
+        height: 48px;
+        margin: 19px 0 13px;
+        font-size: 18px;
+        line-height: 24px;
+    }
+}
