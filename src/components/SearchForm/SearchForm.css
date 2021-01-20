@@ -1,0 +1,118 @@
+.searchForm{
+    background-image: url('../../images/trendyBackground.png');
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    color: #FFFFFF;
+}
+
+.searchForm__form{
+    display: flex;
+}
+
+.searchForm__input{
+    border-radius: 100px;
+    border: 1px solid #D1D2D6;
+    box-sizing: border-box;
+    padding: 16px;
+    outline:none;
+}
+
+.searchForm__button{
+    background: #2F71E5;
+    border-radius: 100px;
+    border: none;
+    color: #FFFFFF;
+    outline: none;
+    cursor: pointer;
+}
+
+.searchForm__button:hover{
+    background: #347EFF;
+}
+
+.searchForm__button.searchForm__button_clicked{
+    background: #2A65CC;
+}
+
+@media screen and (min-width: 320px){
+    .searchForm{
+        background-size: cover;
+        background-position: center;
+    }
+
+    .searchForm__form{
+        flex-direction: column;
+        padding-bottom: 32px;
+    }
+
+    .searchForm__title{
+        margin: 30px auto 0 auto;
+        width: 285px;
+        height: 80px;
+        font-size: 36px;
+        line-height: 40px;
+    }
+
+    .searchForm__text{
+        margin: 16px auto 0 auto;
+        width: 288px;
+        font-size: 18px;
+        line-height: 24px;
+    }
+
+    .searchForm__form{
+        margin: 122px auto 0 auto;
+    }
+
+    .searchForm__input{
+        width: 288px;
+        height: 56px;
+        font-size: 16px;
+        line-height: 22px;
+    }
+
+    .searchForm__button{
+        margin: 16px auto 0 auto;
+        width: 288px;
+        height: 56px;
+    }
+}
+
+@media screen and (min-width: 768px){
+    .searchForm__title{
+        margin: 38px auto 0;
+        font-size: 36px;
+        line-height: 40px;
+        width: 452px;
+    }
+
+    .searchForm__text{
+        margin: 16px auto 0;
+        width: 452px;
+        font-size: 18px;
+        line-height: 24px;
+    }
+
+    .searchForm__form{
+        margin: 48px auto 0;
+        width: 452px;
+        height: 56px;
+        flex-direction: row;
+        position: relative;
+    }
+
+    .searchForm__input{
+        width: 452px;
+        height: 56px;
+    }
+
+    .searchForm__button{
+        width: 160px;
+        height: 56px;
+        position: absolute;
+        margin: 0;
+        top: 0;
+        right: 0;
+    }
+}
