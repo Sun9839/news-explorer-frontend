@@ -10,13 +10,13 @@ function Footer(props) {
             <p className='footer__text'>&#169; 2020 Supersite, Powered by News API</p>
             <div className='footer__links'>
                 <Link to='/' className='footer__link'>Главная</Link>
-                <a target='_blank' href='https://praktikum.yandex.ru/' className='footer__link'>Яндекс.Практикум</a>
+                <a rel="noreferrer" target='_blank' href='https://praktikum.yandex.ru/' className='footer__link'>Яндекс.Практикум</a>
             </div>
             <div className='footer__images'>
-                <a target='_blank' className='footer__img-link' href='https://github.com/'>
+                <a rel="noreferrer" target='_blank' className='footer__img-link' href='https://github.com/'>
                     <img src={gitHub} className='footer__image' alt='github.com/' />
                 </a>
-                <a target='_blank' className='footer__img-link' href='https://www.facebook.com/'>
+                <a rel="noreferrer" target='_blank' className='footer__img-link' href='https://www.facebook.com/'>
                     <img src={facebook} className='footer__image' alt='facebook.com/' />
                 </a>
             </div>

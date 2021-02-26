@@ -1,15 +1,25 @@
 .newsCardList{
-    display: flex;
+    display: none;
+    position: relative;
     flex-direction: column;
     background: #F5F6F7;
 }
 
+.newsCardList.newsCardList__active{
+    display: flex;
+}
+
 .newsCardList__button{
+    display: none;
     background: #FFFFFF;
     border-radius: 80px;
     border: none;
     outline: none;
     cursor: pointer;
+}
+
+.newsCardList__button.newsCardList__button_active{
+    display: block;
 }
 
 .newsCardList__button:hover{

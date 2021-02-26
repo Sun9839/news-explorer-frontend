@@ -1,45 +1,43 @@
 import React from 'react';
 import './NewsCardList.css';
 import NewsCard from '../NewsCard/NewsCard';
-import skywalker from '../../images/Skywalker.jpg';
 
 function NewsCardList(props) {
+    const [listLength, setLength] = React.useState(3);
+    function addNewses() {
+        if (props.newsCards.length <= listLength) {
+            props.buttonOff();
+        } else if ((props.newsCards.length <= listLength + 1) || (props.newsCards.length <= listLength + 2)) {
+            setLength(listLength + 3);
+            props.buttonOff();
+        } else {
+            setLength(listLength + 3);
+        }
+    }
+    React.useEffect(() => {
+        setLength(3);
+    },[props.newsCards]);
     return (
-        <div className='newsCardList'>
-            <h3 className={`newsCardList__title ${props.activeTitle === true ? 'newsCardList__title_active' : ''}`}>Результаты поиска</h3>
+        <div className={`newsCardList ${props.newsCardsActive === true ? 'newsCardList__active' : ''}`}>
+            <h3 className={`newsCardList__title ${(props.activeTitle === true && props.newsCards.length > 0) ? 'newsCardList__title_active' : ''}`}>Результаты поиска</h3>
             <div className='newsCardList__cards'>
-                <NewsCard
-                    keyword='Звёздные воины'
-                    keywordActive={true}
-                    image={skywalker}
-                    date='19ДБЯ'
-                    title='Новоиспечённый Лорд ситхов'
-                    text='Хотя Скайуокер был в ужасе от того, что он сделал, он видел в этом последнюю каплю против Ордена джедаев, и поэтому для него не было пути назад. Он неохотно поклялся служить своему новому Лорду ситхов Дарту Сидиусу, который нарёк Энакина Дартом Вейдером'
-                    source='https://yandex.ru/news/'
-                    sourceTitle='Яндекс.Новости'
-                />
-                <NewsCard
-                    keyword='Звёздные воины'
-                    keywordActive={true}
-                    image={skywalker}
-                    date='19ДБЯ'
-                    title='Новоиспечённый Лорд ситхов'
-                    text='Хотя Скайуокер был в ужасе от того, что он сделал, он видел в этом последнюю каплю против Ордена джедаев, и поэтому для него не было пути назад. Он неохотно поклялся служить своему новому Лорду ситхов Дарту Сидиусу, который нарёк Энакина Дартом Вейдером'
-                    source='https://yandex.ru/news/'
-                    sourceTitle='Яндекс.Новости'
-                />
-                <NewsCard
-                    keyword='Звёздные воины'
-                    keywordActive={true}
-                    image={skywalker}
-                    date='19ДБЯ'
-                    title='Новоиспечённый Лорд ситхов'
-                    text='Хотя Скайуокер был в ужасе от того, что он сделал, он видел в этом последнюю каплю против Ордена джедаев, и поэтому для него не было пути назад. Он неохотно поклялся служить своему новому Лорду ситхов Дарту Сидиусу, который нарёк Энакина Дартом Вейдером'
-                    source='https://yandex.ru/news/'
-                    sourceTitle='Яндекс.Новости'
-                />
+                {
+                    props.newsCards.slice(0, listLength).map((card) => {
+                        return(
+                            <NewsCard
+                                keyword={props.keyWord}
+                                keywordActive={false}
+                                image={card.urlToImage}
+                                date={card.publishedAt}
+                                title={card.title}
+                                text={card.description}
+                                key={Math.random()}
+                                sourceTitle={card.author}
+                            />
+                        )
+                    })}
             </div>
-            <button className='newsCardList__button'>Показать ещё</button>
+            <button onClick={addNewses} className={`newsCardList__button ${props.button === true ? 'newsCardList__button_active' : ''}`}>Показать ещё</button>
         </div>
     );
 }

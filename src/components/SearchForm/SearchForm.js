@@ -6,8 +6,12 @@ import close from '../../images/close.svg';
 
 function SearchForm(props) {
     const [isClicked, click] = React.useState(false);
-    function setClick() {
-        click(!isClicked);
+    const searchRef = React.useRef();
+    function searchNews(e) {
+        e.preventDefault();
+        click(true);
+        props.onSearch(searchRef.current.value);
+        click(false);
     }
     function clickNavButton() {
         props.clickNavButton();
@@ -23,10 +27,10 @@ function SearchForm(props) {
             <h3 className='searchForm__title'>Что творится в <br /> мире?</h3>
             <p className='searchForm__text'>Находите самые свежие статьи на любую тему и сохраняйте в своём личном кабинете.</p>
             <form className='searchForm__form'>
-                <input className='searchForm__input' />
+                <input className='searchForm__input' ref={searchRef} />
                 <button
                     className={`searchForm__button ${isClicked === true ? 'searchForm__button_clicked' : ''}`}
-                    onClick={setClick}
+                    onClick={searchNews}
                 >Искать</button>
             </form>
         </div>
