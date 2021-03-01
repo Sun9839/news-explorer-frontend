@@ -29,7 +29,7 @@ function NewsCardList(props) {
         const numberOfMonth = date.slice(5,7);
         const year = date.slice(0,4);
         if (day.startsWith('0')) {
-            return `${day.slice(1,2)} ${numberOfMonth} ${year}`
+            return `${day.slice(1,2)} ${renderMonth(numberOfMonth)} ${year}`
         } else {
             return `${day} ${renderMonth(numberOfMonth)} ${year}`
         }
