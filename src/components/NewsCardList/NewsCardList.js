@@ -55,11 +55,11 @@ function NewsCardList(props) {
                                 image={card.urlToImage !== undefined ? card.urlToImage : card.image}
                                 date={card.publishedAt !== undefined ? renderDate(card.publishedAt) : renderDate(card.date)}
                                 title={card.title}
-                                text={card.description}
+                                text={card.description !== undefined ? card.description : card.text}
                                 key={Math.random()}
                                 link={card.url !== undefined ? card.url : card.link}
                                 source={card.source}
-                                sourceTitle={card.author}
+                                sourceTitle={card.author !== undefined ? card.author : card.source}
                                 deleteCard={deleteCard}
                             />
                         )
