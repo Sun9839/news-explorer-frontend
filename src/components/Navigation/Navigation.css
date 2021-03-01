@@ -9,6 +9,20 @@
     font-weight: 500;
 }
 
+.navigation__link.navigation__link_active{
+    border-bottom: 3px solid  #FFFFFF;
+    padding-bottom: 25px;
+}
+
+.navigation__link.navigation__link_black-active{
+    border-bottom: 3px solid  #1A1B22;
+    padding-bottom: 25px;
+}
+
+.navigation__disabled{
+    display: none;
+}
+
 .navigation__button{
     background: none;
     border-radius: 100px;
@@ -16,6 +30,20 @@
     color: #FFFFFF;
     font-weight: 500;
     outline: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.navigation__exit-img{
+    display: none;
+}
+
+.navigation__exit-img_active{
+    display: block;
+    width: 24px;
+    height: 24px;
 }
 
 @media screen and (min-width: 320px) and (max-width: 767px){
