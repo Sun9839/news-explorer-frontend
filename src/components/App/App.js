@@ -6,22 +6,29 @@ import SavedNews from '../SavedNews/SavedNews';
 import ProtectedRoute from '../ProtectedRoute/ProtectedRoute';
 function App(props) {
     const [loggedIn,setLoggedIn] = React.useState(false);
+    const [user, setUserObject] = React.useState({});
     function auth(){
-        setLoggedIn(true)
+        setLoggedIn(true);
+    }
+    function exit() {
+        setLoggedIn(false);
     }
     return(
         <BrowserRouter>
             <Switch>
-                <Route path='/'>
-                    <Main
-                        loggedIn={auth}
-                    />
-                </Route>
                 <ProtectedRoute
                     path='/saved-news'
                     component={SavedNews}
                     loggedIn={loggedIn}
+                    user={user}
+                    exit={exit}
                 />
+                <Route path='/'>
+                    <Main
+                        loggedIn={auth}
+                        exit={exit}
+                    />
+                </Route>
             </Switch>
         </BrowserRouter>
     );

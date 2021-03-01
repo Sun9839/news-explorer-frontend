@@ -6,7 +6,7 @@ function SavedNewsHeader(props) {
         <div className='savedNewsHeader'>
             <p className='savedNewsHeader__savedNews'>Сохраненные статьи</p>
             <h3 className='savedNewsHeader__title'>{props.title}</h3>
-            <p className='savedNewsHeader__keywords'>По ключевым словам: <b>Звёздные войны</b></p>
+            <p className='savedNewsHeader__keywords'>По ключевым словам: <b>{props.keyWords}</b></p>
         </div>
     )
 }

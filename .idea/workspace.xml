@@ -2,20 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3e9e6773-682b-41fa-8a34-32123b6a3715" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/news-explorer-frontend.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/App/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Footer/Footer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Footer/Footer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Header.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Main/Main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Main/Main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/NewsCardList/NewsCardList.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/NewsCardList/NewsCardList.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Navigation/Navigation.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navigation/Navigation.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Navigation/Navigation.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navigation/Navigation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/NewsCard/NewsCard.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/NewsCard/NewsCard.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/NewsCard/NewsCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/NewsCard/NewsCard.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/NewsCardList/NewsCardList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/NewsCardList/NewsCardList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Popup/Popup.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Popup/Popup.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Popup/Popup.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Popup/LoginPopup.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Popup/LoginPopup.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Popup/LoginPopup.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/SavedNews/SavedNews.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SavedNews/SavedNews.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/SavedNewsHeader/SavedNewsHeader.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SavedNewsHeader/SavedNewsHeader.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/SearchForm/SearchForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SearchForm/SearchForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/Skywalker.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/MainApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/MainApi.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,7 +44,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../fullProject/react-mesto-api-full/frontend" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -80,7 +81,11 @@
       <workItem from="1613996548479" duration="3220000" />
       <workItem from="1614098443921" duration="19505000" />
       <workItem from="1614288566660" duration="3193000" />
-      <workItem from="1614365043820" duration="15140000" />
+      <workItem from="1614365043820" duration="15697000" />
+      <workItem from="1614492368362" duration="27000" />
+      <workItem from="1614493769665" duration="4924000" />
+      <workItem from="1614526725568" duration="26433000" />
+      <workItem from="1614559464608" duration="3585000" />
     </task>
     <servers />
   </component>

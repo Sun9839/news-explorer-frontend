@@ -26,8 +26,11 @@ function Header(props) {
                 <img alt='Меню' className='header__menu-img' src={menuImage === true ? close : open} />
             </button>
             <Navigation
+                savedNews={props.savedNews}
+                main={props.main}
                 active={menuState}
-                buttonText={props.navigationButtonText}
+                logout={props.logout}
+                user={props.user}
                 blackColor={props.navigationBlackColor}
                 onClick={handleClick}
             />

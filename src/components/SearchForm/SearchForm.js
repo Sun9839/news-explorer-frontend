@@ -3,6 +3,7 @@ import './SearchForm.css';
 import Header from "../Header/Header";
 import open from '../../images/menu.svg';
 import close from '../../images/close.svg';
+import logout from '../../images/logout.svg';
 
 function SearchForm(props) {
     const [isClicked, click] = React.useState(false);
@@ -19,10 +20,12 @@ function SearchForm(props) {
     return(
         <div className='searchForm'>
             <Header
-                navigationButtonText='Авторизоваться'
+                main={props.main}
+                logout={logout}
                 closeImage={close}
                 openImage={open}
                 clickNavigationButton={clickNavButton}
+                user={props.user}
             />
             <h3 className='searchForm__title'>Что творится в <br /> мире?</h3>
             <p className='searchForm__text'>Находите самые свежие статьи на любую тему и сохраняйте в своём личном кабинете.</p>

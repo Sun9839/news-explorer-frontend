@@ -13,6 +13,8 @@ import {mainApi} from "../../utils/MainApi";
 import MessagePopup from "../Popup/MessagePopup";
 
 function Main(props) {
+    const jwt = localStorage.getItem('jwt');
+    const [user, setUser] = React.useState({});
     const [loginPopupState, setLoginPopupState] = React.useState(false);
     const [regPopupState, setRegPopupState] = React.useState(false);
     const [newses, setNewses] = React.useState([]);
@@ -52,6 +54,7 @@ function Main(props) {
         setNewsAddButton(false);
     }
     function searchNews(question){
+        setKeyWord(question);
         localStorage.removeItem('news');
         setNewsesState(false);
         setPreload({
@@ -118,7 +121,6 @@ function Main(props) {
     function login(obj) {
         mainApi.login(obj)
             .then((data) => {
-                console.log(data._id);
                 localStorage.setItem('jwt',data._id);
                 props.loggedIn();
                 props.history.push('/saved-news');
@@ -127,7 +129,22 @@ function Main(props) {
                 setLoginError(true);
             })
     }
+    function clickLogout(){}
+    function exit(){
+        localStorage.removeItem('jwt');
+        setUser({});
+        props.exit();
+        props.history.push('/');
+    }
     React.useEffect(() => {
+        if(jwt != null){
+            mainApi.getUser(jwt).then((data) => {
+                if(data._id){
+                    setUser(data);
+                    props.loggedIn();
+                }
+            })
+        }
         const lastNewses = JSON.parse(localStorage.getItem('news'))
         if (lastNewses != null){
             setNewses(lastNewses);
@@ -161,13 +178,19 @@ function Main(props) {
                 opened={messagePopup}
                 />
             <SearchForm
-                clickNavButton={openLoginPopup}
+                clickNavButton={user.name === undefined ? openLoginPopup : exit}
                 onSearch={searchNews}
+                user={user}
+                main={true}
             />
             <NewsCardList
+                logoutText={user.name === undefined ? 'Войдите, чтобы сохранять статьи' : 'Сохранить статью'}
+                buttonImageName='saveButton'
+                keywordActive={false}
                 newsCards={newses}
                 activeTitle={true}
                 newsCardsActive={newsesState}
+                clickLogout={clickLogout}
                 button={newsAddButton}
                 buttonOff={offNewsButton}
                 keyWord={keyWord}

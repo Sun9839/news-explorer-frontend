@@ -1,4 +1,5 @@
 import React, { useCallback } from "react";
+import { withRouter} from 'react-router-dom'
 import './Popup.css';
 import close from '../../images/close.svg';
 
@@ -48,6 +49,7 @@ function LoginPopup(props) {
             password: values.password,
         })
         formRef.current.reset();
+        props.history.push('/saved-news');
     }
     React.useEffect(() => {
         document.addEventListener('keydown', function (evt) {
@@ -81,4 +83,4 @@ function LoginPopup(props) {
     );
 }
 
-export default LoginPopup;
+export default withRouter(LoginPopup);
